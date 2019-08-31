@@ -19,12 +19,11 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-nav">
 	<!-- Navigation -->
-	<nav id="main-nav" class="navbar navbar-expand-sm  fixed-top mb-3">
+	<nav id="main-nav" class="navbar navbar-expand-sm fixed-top mb-3">
 		<div class="container">
-			<a class="navbar-brand" href="#home">
-				<h4>codewithmsa</h4>
+			<a class="navbar-brand" href="#home">codewithmsa
 			</a>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
@@ -229,6 +228,25 @@
 	<script src="./assets/js/jquery.lineProgressbar.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 	<script src="./assets/js/app.js"></script>
+	<script>
+		//Smooth Scroll
+		// $("#main-nav a").on("click", function (e) {
+		// 	if (this.hash !== "") {
+		// 		e.preventDefault();
+
+		// 		const hash = this.hash;
+
+		// 		//Implement smooth
+		// 		$("html,body").animate(
+		// 			{
+		// 				scrollTop: $(hash).offset().top
+		// 			},
+		// 			800,
+		// 			() => (window.location.hash = hash)
+		// 		);
+		// 	}
+		// });
+	</script>
 </body>
 
 </html>
