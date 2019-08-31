@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Codewithmsa</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- font-awesome -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Progress Bar -->
+	<link rel="stylesheet" href="./assets/css/jquery.lineProgressbar.css" />
+	<!-- Custom  -->
+	<link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav id="main-nav" class="navbar navbar-expand-sm  fixed-top mb-3">
+		<div class="container">
+			<a class="navbar-brand" href="#home">
+				<h4>codewithmsa</h4>
+			</a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Landing Page -->
+	<section id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="text-center  titletext"> Hello, I am</p>
+					<p class="text-center  titletextname">Mohammad Suhaib Ahmed</p>
+					<!-- <p class="text-center subtext"> <span id="devtext">DEVELOPER</span> / <span id="destext">
+							DESIGNER</span> </p> -->
+					<h2 class="text-center subtext"> I am a <span class="type typedtext"></span></h2>
+					<p class="text-center">
+						<button id="workbutton"><a href="#portfolio"> CHECK MY WORK</a></button>
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section class="about p-5" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mt-5">
+					<h2 class="text-center sectionhead">About Me</h2>
+					<hr class="text-center headline">
+					<div class="text-center aboutinfo">
+						<p>My name is Mohammad Suhaib Ahmed. I am a final year <span class="selected">Computer
+								Engineering</span>
+							Student, I am passionate about <span class="selected">Web</span> Development and <span
+								class="selected">Mobile</span>
+							Development.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mt-5">
+				<div class="col-md-5 text">
+					<img src="assets/images/profilepic.jpg" alt="profilepic" class="profilepic img-fluid">
+				</div>
+				<div class="col-md-7 px-3">
+					<h2 class="subtexthead mt-2">Technical Skills</h2>
+					<div class="">
+
+
+						<span>Core Java</span>
+						<div id="core-java-bar"></div>
+						<span>C++</span>
+						<div id="cpp-bar"></div>
+						<span>Python</span>
+						<div id="python-bar"></div>
+						<span>HTML5</span>
+						<div id="html5-bar"></div>
+						<span>CSS3</span>
+						<div id="css3-bar"></div>
+						<span>Javascript</span>
+						<div id="js-bar"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Portfolio -->
+	<section class="portfolio p-5" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="text-center sectionhead">Portfolio</h2>
+					<hr class="text-center headline">
+				</div>
+			</div>
+		</div>
+		<div class="container mb-4">
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="subtexthead mt-5">Preventive Maintaince System</h2>
+					<p>The Project we made is for Smart India Hackathon 2019 Software
+						Edition in which we made a Preventive Maintenance System for Goa
+						Shipyard Ltd.
+						Preventive Maintenance System proactively perform maintenance,
+						repairs and replacements so that you can prevent failures before
+						they ever have the chance to occur.</p>
+					<button class="checkproject"><a href="https://github.com/msa06/PMS-Frontend" class="plink"> View <i
+								class="fa fa-github"></i></a> </button>
+				</div>
+				<div class="col-md-6">
+					<img src="./assets/images/portfolio/pms.png" class="img-fluid" alt="pmsimg">
+				</div>
+			</div>
+		</div>
+		<div class="container mb-4">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="./assets/images/portfolio/quizapp.png" class="quizapp img-fluid" alt="quizapp">
+				</div>
+				<div class="col-md-6">
+					<h2 class="subtexthead mt-2">Pokemon App</h2>
+					<p>Live Quiz Application for the website swagdeal. in where there will be
+						weekly quiz game and the user can win gift vouchers for the website. I
+						Implemented this project using Android for frontend and Firebase for
+						backend and Rest API for Quiz Data.</p>
+					<button class="checkproject"><a href="https://github.com/msa06/Pokoman" class="plink"> View <i
+								class="fa fa-github"></i></a> </button>
+				</div>
+
+			</div>
+		</div>
+		<div class="container mb-4">
+			<div class="row">
+
+				<div class="col-md-6">
+					<h2 class="subtexthead mt-4">Reable App</h2>
+					<p>Timetable app was designed for the
+						convenience of the
+						student. It was a miniproject for college. The app main Feature is that
+						it is a Realtime application which means that it updates the all the
+						changes in the timetable.</p>
+					<button class="checkproject"><a href="https://github.com/msa06/Timetable-Miniproject" class="plink">
+							View <i class="fa fa-github"></i></a> </button>
+				</div>
+				<div class="col-md-6">
+					<img src="./assets/images/portfolio/reable.png" class="reableapp img-fluid" alt="quizapp">
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Footer/ Contact -->
+	<section id="contact" class="mt-3 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mt-3">
+					<h3 class="sectionhead text-white text-center">Interested in doing a project together?</h3>
+					<h2 class="text-center subtexthead text-white">Get In Touch</h2>
+					<hr class="text-center headlinerev">
+					<div class="text-center">
+						<a href="https://www.linkedin.com/in/msa06/"><i class="fa fa-3x fa-linkedin p-3 "></i></a>
+						<a href="https://github.com/msa06"><i class="fa fa-3x fa-github  p-3 "></i></a>
+						<a href="https://www.facebook.com/suhaib.md"><i class="fa fa-3x fa-facebook p-3 "></i></a>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+	<!-- On scroll JS  -->
+	<script src="./assets/js/appear.js"></script>
+	<script src="./assets/js/jquery.lineProgressbar.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script src="./assets/js/app.js"></script>
+</body>
+
+</html>

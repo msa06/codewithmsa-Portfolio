@@ -1,0 +1,236 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+:root {
+  --textcolorlight: #453a49;
+  --textcolordark: #0a122a;
+  --primarycolor: #76b041;
+  --ascentcolor: #ad161b;
+}
+
+/* Home */
+home {
+  color: #453a49;
+  box-sizing: border-box;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav-item a {
+  color: #453a49;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+.nav-item a:hover {
+  /* color: rgba(10, 18, 42, 1); */
+  border-bottom: 2px solid #76b041;
+}
+
+nav.shrink {
+  background: #453a49;
+  height: 60px;
+  transition: all ease 0.5s;
+}
+nav.shrink a {
+  text-decoration: none;
+  padding-bottom: 3px;
+  color: white;
+}
+.nav-item .shrink a:hover {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid #76b041;
+}
+
+.active {
+  border-bottom: 2px solid #76b041;
+}
+
+.navbar-toggler-icon {
+  border: rgba(10, 18, 42, 1);
+}
+
+/* Home */
+
+#home {
+  /* set background */
+  background: url(../images/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 650px;
+}
+
+.titletext {
+  color: #0a122a;
+  font-size: 48px;
+  font-weight: bolder;
+  margin-top: 15%;
+}
+
+.titletextname {
+  font-size: 56px;
+  font-weight: bolder;
+  color: #76b041;
+  margin-bottom: 2%;
+}
+
+.subtext {
+  font-size: 36px;
+}
+.subtexthead {
+  font-size: 28px;
+  font-weight: bolder;
+  color: var(--textcolordark);
+}
+
+.typedtext {
+  color: #ad161b;
+  font-weight: bolder;
+}
+
+/* 
+#devtext {
+  font-family: "Roboto Mono", monospace;
+}
+
+#destext {
+  font-family: "Monoton", cursive;
+} */
+
+#workbutton {
+  border: 2px solid #453a49;
+  color: #453a49;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 6px 15px;
+  box-shadow: 0px 0px 20px 1px #cccccc;
+  margin: 20px;
+}
+#workbutton:hover {
+  border: 3px solid #453a49;
+}
+#workbutton a {
+  color: #453a49;
+}
+
+/* About Page */
+.sectionhead {
+  color: #0a122a;
+  font-size: 36px;
+  font-weight: bolder;
+}
+.headline {
+  width: 10%;
+  border: 3px solid #ad161b;
+  border-radius: 5px;
+}
+
+.aboutinfo {
+  font-size: 22px;
+}
+
+.selected {
+  color: #66af21;
+  font-weight: bolder;
+}
+
+.profilepic {
+  /* border: 2px solid #0a122a; */
+  box-shadow: 2px 2px 5px 2px #aaa;
+  margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+.portfolio {
+  min-height: 650px;
+}
+.checkproject {
+  border: 2px solid #453a49;
+  background: white;
+  color: #453a49;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 6px 15px;
+}
+
+.quizapp {
+  height: 280px;
+  float: left;
+  padding: 20px;
+}
+.reableapp {
+  height: 280px;
+  float: right;
+  padding: 20px;
+}
+.plink {
+  text-decoration: none;
+  color: #453a49;
+}
+
+/* Contact */
+#contact {
+  background: #453a49;
+}
+.headlinerev {
+  width: 10%;
+  border: 3px solid #76b041;
+  border-radius: 5px;
+}
+.fa-3x {
+  color: #aaa;
+}
+.fa-3x:hover {
+  color: #cccccc;
+}
+
+/* Media Query */
+
+/* @media (min-width: 664px) {
+  .titletext {
+    margin-top: 40%;
+    font-size: 36px;
+  }
+
+  .titletextname {
+    font-size: 36px;
+  }
+
+  .subtext {
+    font-size: 24px;
+  }
+  #workbutton {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+  .titletext {
+    margin-top: 50%;
+    font-size: 36px;
+  }
+
+  .titletextname {
+    font-size: 36px;
+    margin: 8%;
+  }
+
+  .subtext {
+    font-size: 24px;
+    margin: 8%;
+  }
+  #workbutton {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+}
