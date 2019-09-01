@@ -1,255 +1,157 @@
-/* appear.js 1.2.1 */
-(function(window){
-  'use strict';
-  var scrollLastPos = null, scrollTimer = 0, scroll = {};
+/*
+ * jQuery.appear
+ * https://github.com/bas2k/jquery.appear/
+ * http://code.google.com/p/jquery-appear/
+ * http://bas2k.ru/
+ *
+ * Copyright (c) 2009 Michael Hixson
+ * Copyright (c) 2012-2014 Alexander Brovikov
+ * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+ */
+(function($) {
+  $.fn.appear = function(fn, options) {
+    var settings = $.extend(
+      {
+        //arbitrary data to pass to fn
+        data: undefined,
 
-  function track(){
-    var newPos = window.scrollY || window.pageYOffset;  // pageYOffset for IE9
-    if ( scrollLastPos != null ){
-      scroll.velocity = newPos - scrollLastPos;
-      scroll.delta = (scroll.velocity >= 0) ? scroll.velocity : (-1 * scroll.velocity);
-      
-    }
-    scrollLastPos = newPos;
-    if(scrollTimer){
-      clearTimeout(scrollTimer);
-    }
-    scrollTimer = setTimeout(function(){
-      scrollLastPos = null;
-    }, 30);
-  }
-  addEventListener('scroll', track, false);
+        //call fn only on the first appear?
+        one: true,
 
-  // determine if a given element (plus an additional "bounds" area around it) is in the viewport
-  function viewable(el, bounds){
-    var rect = el.getBoundingClientRect();
-    return (
-      (rect.top + rect.height) >= 0 &&
-      (rect.left + rect.width) >= 0 &&
-      (rect.bottom - rect.height) <= ( (window.innerHeight || document.documentElement.clientHeight) + bounds) &&
-      (rect.right - rect.width) <= ( (window.innerWidth || document.documentElement.clientWidth) + bounds)
+        // X & Y accuracy
+        accX: 0,
+        accY: 0
+      },
+      options
     );
-  }
 
-  return function(obj){
+    return this.each(function() {
+      var t = $(this);
 
-    return (function(obj){
-      var initd = false, elements = [], elementsLength, reappear = [],
-        appeared = 0, disappeared = 0, timer, deltaSet, opts = {}, done;
+      //whether the element is currently visible
+      t.appeared = false;
 
-      // handle debouncing a function for better performance on scroll
-      function debounce(fn, delay) {
-        return function () {
-          var self = this, args = arguments;
-          clearTimeout(timer);
-          
-          timer = setTimeout(function () {
-            fn.apply(self, args);
-          }, delay);
-        };
+      if (!fn) {
+        //trigger the custom event
+        t.trigger("appear", settings.data);
+        return;
       }
 
-      // called on scroll and resize event, so debounce the actual function that does
-      // the heavy work of determining if an item is viewable and then "appearing" it
-      function checkAppear() {
-        if(scroll.delta < opts.delta.speed) {
-          if(!deltaSet) {
-            deltaSet = true;
-            doCheckAppear();
-            setTimeout(function(){
-              deltaSet = false;
-            }, opts.delta.timeout);
-          }
-        }
-        (debounce(function() {
-          doCheckAppear();
-        }, opts.debounce)());
-      }
+      var w = $(window);
 
-      function begin() {
-        // initial appear check before any scroll or resize event
-        doCheckAppear();
-
-        // add relevant listeners
-        addEventListener('scroll', checkAppear, false);
-        addEventListener('resize', checkAppear, false);
-      }
-
-      function end() {
-        elements = [];
-        if(timer) {
-          clearTimeout(timer);
-        }
-        removeListeners();
-      }
-
-      function removeListeners() {
-        
-        removeEventListener('scroll', checkAppear, false);
-        removeEventListener('resize', checkAppear, false);
-      }
-
-      function doCheckAppear() {
-        if(done) {
+      //fires the appear event when appropriate
+      var check = function() {
+        //is the element hidden?
+        if (!t.is(":visible")) {
+          //it became hidden
+          t.appeared = false;
           return;
         }
-        
-        elements.forEach(function(n, i){
-          if(n && viewable(n, opts.bounds)) {
-            // only act if the element is eligible to reappear
-            if(reappear[i]) {
-              // mark this element as not eligible to appear
-              reappear[i] = false;
-              // increment the count of appeared items
-              appeared++;
-              
-              // call the appear fn
-              if(opts.appear) {
-                opts.appear(n);
-              }
-              // if not tracking reappears or disappears, need to remove node here
-              if(!opts.disappear && !opts.reappear) {
-                // stop tracking this node, which is now viewable
-                elements[i] = null;
-              }
-            }
-          } else {
-            if(reappear[i] === false) {
-              if(opts.disappear) {
-                opts.disappear(n);
-              }
-              // increment the dissappeared count
-              disappeared++;
-              
-              // if not tracking reappears, need to remove node here
-              if(!opts.reappear) {
-                // stop tracking this node, which is now viewable
-                elements[i] = null;
-              }
-            }
-            // element is out of view and eligible to be appeared again
-            reappear[i] = true;
-          }
-        });
 
-        // remove listeners if all items have (re)appeared
-        if(!opts.reappear && (!opts.appear || opts.appear && appeared === elementsLength) && (!opts.disappear || opts.disappear && disappeared === elementsLength)) {
-          // ensure done is only called once (could be called from a trailing debounce/throttle)
-          done = true;
-          removeListeners();
-          // all items have appeared, so call the done fn
-          if(opts.done){
-            opts.done();
-          }
-        }
-      }
+        //is the element inside the visible window?
+        var a = w.scrollLeft();
+        var b = w.scrollTop();
+        var o = t.offset();
+        var x = o.left;
+        var y = o.top;
 
-      function init() {
-        // make sure we only init once
-        if(initd) {
-          return;
-        }
-        initd = true;
+        var ax = settings.accX;
+        var ay = settings.accY;
+        var th = t.height();
+        var wh = w.height();
+        var tw = t.width();
+        var ww = w.width();
 
-        // call the obj init fn
-        if(opts.init) {
-          opts.init();
-        }
-        // get the elements to work with
-        var els;
-        if(typeof opts.elements === 'function') {
-          els = opts.elements();
+        if (
+          y + th + ay >= b &&
+          y <= b + wh + ay &&
+          x + tw + ax >= a &&
+          x <= a + ww + ax
+        ) {
+          //trigger the custom event
+          if (!t.appeared) t.trigger("appear", settings.data);
         } else {
-          els = opts.elements;
+          //it scrolled out of view
+          t.appeared = false;
         }
-        if(els) {
-          //  put elements into an array object to work with
-          elementsLength = els.length;
-          for(var i = 0; i < elementsLength; i += 1) {
-            elements.push(els[i]);
-            reappear.push(true);
-          }
-          begin();
-        }
-      }
-
-      var appear = function(obj) {
-        obj = obj || {};
-
-        // assign the fn to execute when a node is visible
-        opts = {
-          // a function to be run when the dom is ready (allows for any setup work)
-          init: obj.init,
-          // either an array of elements or a function that will return an htmlCollection
-          elements: obj.elements,
-          // function to call when an element is "viewable", will be passed the element to work with
-          appear: obj.appear,
-          // function to call when an element is no longer "viewable", will be passed the element to work with
-          disappear: obj.disappear,
-          // function to call when all the elements have "appeared"
-          done: obj.done,
-          // keep tracking the elements
-          reappear: obj.reappear,
-          // the extra border around an element to make it viewable outside of the true viewport
-          bounds: obj.bounds || 0,
-          // the debounce timeout
-          debounce: obj.debounce || 50,
-          // appear.js will also check for items on continuous slow scrolling
-          // you can controll how slow the scrolling should be  (deltaSpeed)
-          // and when it will check again (deltaTimeout) after it has inspected the dom/viewport;
-          delta: {
-            speed: obj.deltaSpeed || 50,
-            timeout: obj.deltaTimeout || 500
-          }
-        };
-
-        // add an event listener to init when dom is ready
-        addEventListener('DOMContentLoaded', init, false);
-
-        // http://stackoverflow.com/questions/9900311/how-do-i-target-only-internet-explorer-10-for-certain-situations-like-internet-e/13971998#13971998
-        var isIE10 = false;
-        if (Function('/*@cc_on return document.documentMode===10@*/')()){
-          isIE10 = true;
-        }
-        var completeOrLoaded = document.readyState === 'complete' || document.readyState === 'loaded';
-
-        // call init if document is ready to be worked with and we missed the event
-        if (isIE10) {
-          if (completeOrLoaded) {
-            init();
-          }
-        } else {
-          if (completeOrLoaded || document.readyState === 'interactive') {
-            init();
-          }
-        }
-
-        return {
-          // manually fire check for visibility of tracked elements
-          trigger: function trigger(){
-            doCheckAppear();
-          },
-          // pause tracking of elements
-          pause: function pause(){
-            removeListeners();
-          },
-          // resume tracking of elements after a pause
-          resume: function resume(){
-            begin();
-          },
-          // provide a means to stop monitoring all elements
-          destroy: function destroy() {
-            end();
-          }
-        };
-
       };
 
-      if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-        module.exports = appear;
-      } else {
-        window.appear = appear;
-      }
-    }()(obj));
+      //create a modified fn with some additional logic
+      var modifiedFn = function() {
+        //mark the element as visible
+        t.appeared = true;
+
+        //is this supposed to happen only once?
+        if (settings.one) {
+          //remove the check
+          w.unbind("scroll", check);
+          var i = $.inArray(check, $.fn.appear.checks);
+          if (i >= 0) $.fn.appear.checks.splice(i, 1);
+        }
+
+        //trigger the original fn
+        fn.apply(this, arguments);
+      };
+
+      //bind the modified fn to the element
+      if (settings.one) t.one("appear", settings.data, modifiedFn);
+      else t.bind("appear", settings.data, modifiedFn);
+
+      //check whenever the window scrolls
+      w.scroll(check);
+
+      //check whenever the dom changes
+      $.fn.appear.checks.push(check);
+
+      //check now
+      check();
+    });
   };
-}(this));
+
+  //keep a queue of appearance checks
+  $.extend($.fn.appear, {
+    checks: [],
+    timeout: null,
+
+    //process the queue
+    checkAll: function() {
+      var length = $.fn.appear.checks.length;
+      if (length > 0) while (length--) $.fn.appear.checks[length]();
+    },
+
+    //check the queue asynchronously
+    run: function() {
+      if ($.fn.appear.timeout) clearTimeout($.fn.appear.timeout);
+      $.fn.appear.timeout = setTimeout($.fn.appear.checkAll, 20);
+    }
+  });
+
+  //run checks when these methods are called
+  $.each(
+    [
+      "append",
+      "prepend",
+      "after",
+      "before",
+      "attr",
+      "removeAttr",
+      "addClass",
+      "removeClass",
+      "toggleClass",
+      "remove",
+      "css",
+      "show",
+      "hide"
+    ],
+    function(i, n) {
+      var old = $.fn[n];
+      if (old) {
+        $.fn[n] = function() {
+          var r = old.apply(this, arguments);
+          $.fn.appear.run();
+          return r;
+        };
+      }
+    }
+  );
+})(jQuery);

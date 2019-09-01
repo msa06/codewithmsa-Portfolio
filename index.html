@@ -14,8 +14,11 @@
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Progress Bar -->
 	<link rel="stylesheet" href="./assets/css/jquery.lineProgressbar.css" />
+	<!-- Animate -->
+	<link rel="stylesheet" href="./assets/css/animate.css" type="text/css">
 	<!-- Custom  -->
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
 
 </head>
 
@@ -42,6 +45,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#contact">Contact</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="assets/Resume/">Resume</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -52,13 +58,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<p class="text-center  titletext"> Hello, I am</p>
-					<p class="text-center  titletextname">Mohammad Suhaib Ahmed</p>
+					<p class="text-center titletext"> Hello, I am</p>
+					<p class="text-center titletextname">Mohammad Suhaib Ahmed</p>
 					<!-- <p class="text-center subtext"> <span id="devtext">DEVELOPER</span> / <span id="destext">
 							DESIGNER</span> </p> -->
 					<h2 class="text-center subtext"> I am a <span class="type typedtext"></span></h2>
 					<p class="text-center">
-						<button id="workbutton"><a href="#portfolio"> CHECK MY WORK</a></button>
+						<button id="workbutton" class="mt-5"><a href="#portfolio"> CHECK MY WORK</a></button>
 					</p>
 
 				</div>
@@ -88,9 +94,9 @@
 				<div class="col-md-5 text">
 					<img src="assets/images/profilepic.jpg" alt="profilepic" class="profilepic img-fluid">
 				</div>
-				<div class="col-md-7 px-3">
+				<div class="col-md-7 px-3 ">
 					<h2 class="subtexthead mt-2">Technical Skills</h2>
-					<div class="">
+					<div class="techskills">
 
 
 						<span>Core Java</span>
@@ -131,19 +137,21 @@
 						Shipyard Ltd.
 						Preventive Maintenance System proactively perform maintenance,
 						repairs and replacements so that you can prevent failures before
-						they ever have the chance to occur.</p>
+						they ever have the chance to occur.
+					</p>
 					<button class="checkproject"><a href="https://github.com/msa06/PMS-Frontend" class="plink"> View <i
 								class="fa fa-github"></i></a> </button>
 				</div>
 				<div class="col-md-6">
-					<img src="./assets/images/portfolio/pms.png" class="img-fluid" alt="pmsimg">
+					<img src="./assets/images/portfolio/pms.png" class="img-fluid wow fadeInRight" alt="pmsimg">
 				</div>
 			</div>
 		</div>
 		<div class="container mb-4">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="./assets/images/portfolio/quizapp.png" class="quizapp img-fluid" alt="quizapp">
+					<img src="./assets/images/portfolio/quizapp.png" class="quizapp img-fluid wow fadeInLeft"
+						alt="quizapp">
 				</div>
 				<div class="col-md-6">
 					<h2 class="subtexthead mt-2">Pokemon App</h2>
@@ -171,7 +179,8 @@
 							View <i class="fa fa-github"></i></a> </button>
 				</div>
 				<div class="col-md-6">
-					<img src="./assets/images/portfolio/reable.png" class="reableapp img-fluid" alt="quizapp">
+					<img src="./assets/images/portfolio/reable.png" class="reableapp img-fluid wow fadeInRight"
+						alt="quizapp">
 				</div>
 
 			</div>
@@ -185,15 +194,61 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mt-3">
-					<h3 class="sectionhead text-white text-center">Interested in doing a project together?</h3>
-					<h2 class="text-center subtexthead text-white">Get In Touch</h2>
+					<h3 class="sectionhead text-white text-center wow bounceInLeft">Interested in doing a project
+						together?</h3>
+					<h2 class="text-center subtexthead text-white  wow bounceInRight">Get In Touch</h2>
 					<hr class="text-center headlinerev">
 					<div class="text-center">
-						<a href="https://www.linkedin.com/in/msa06/"><i class="fa fa-3x fa-linkedin p-3 "></i></a>
-						<a href="https://github.com/msa06"><i class="fa fa-3x fa-github  p-3 "></i></a>
-						<a href="https://www.facebook.com/suhaib.md"><i class="fa fa-3x fa-facebook p-3 "></i></a>
 
 					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-md-6 mb-4">
+					<div class="wow bounceInLeft">
+						<h5>Address</h5>
+						<p>402, Gokulam Society, Bopkhel Pune</p>
+						<h5>Email</h5>
+						<p>suhaib.md06@gmail.com</p>
+						<h5>Phone</h5>
+						<p>+91 9028 334 314</p>
+
+					</div>
+
+					<a href="https://www.linkedin.com/in/msa06/"><i
+							class="fa fa-2x fa-linkedin pr-3 wow bounceInUp"></i></a>
+					<a href="https://github.com/msa06"><i class="fa fa-2x fa-github pr-3 wow bounceInUp "></i></a>
+					<a href="https://www.facebook.com/suhaib.md"><i
+							class="fa fa-2x fa-facebook pr-3  wow bounceInUp "></i></a>
+					<a href="https://www.youtube.com/MSAProd06"><i
+							class="fa fa-2x fa-youtube pr-3  wow bounceInUp "></i></a>
+				</div>
+				<div class="col-md-6 wow bounceInRight">
+					<div class="row">
+						<div class="col">
+							<form action="https://formspree.io/suhaib.md06@gmail.com" method="POST">
+								<div class="form-group">
+									<input type="text" class="form-control" name="name" placeholder="Your Name">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" name="email" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" name="message" cols="4 " rows="2"
+										placeholder="Message"></textarea>
+								</div>
+								<div class="form-group">
+									<input type="submit" value="Send" class="btn btn-submit btn-block btn-lg">
+								</div>
+							</form>
+						</div>
+
+
+					</div>
+
 
 				</div>
 			</div>
@@ -224,28 +279,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 	<!-- On scroll JS  -->
+
 	<script src="./assets/js/appear.js"></script>
 	<script src="./assets/js/jquery.lineProgressbar.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script src="./assets/js/wow.min.js"></script>
 	<script src="./assets/js/app.js"></script>
 	<script>
-		//Smooth Scroll
-		// $("#main-nav a").on("click", function (e) {
-		// 	if (this.hash !== "") {
-		// 		e.preventDefault();
 
-		// 		const hash = this.hash;
-
-		// 		//Implement smooth
-		// 		$("html,body").animate(
-		// 			{
-		// 				scrollTop: $(hash).offset().top
-		// 			},
-		// 			800,
-		// 			() => (window.location.hash = hash)
-		// 		);
-		// 	}
-		// });
 	</script>
 </body>
 

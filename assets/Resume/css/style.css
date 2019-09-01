@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.name {
+    font-size: 48px;
+}
+
+.dp {
+    border: 1px solid #ccc;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    margin-top: 1px;
+}
+
+.fas, .fab {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.left-border {
+    padding-left: 5px;
+    border-left: 5px solid;
+}
+
+.subhead {
+    font-weight: 700px;
+}
+
+p {
+    margin-bottom: 2px;
+    font-size: 18px;
+    color: #555;
+}
+
+h6 {
+    display: inline;
+    font-weight: 600;
+}
+
+h3 {
+    margin-left: 0px;
+}
+
+.objective {
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.resumebtn {
+    position: fixed;
+    right: 0px;
+    top: 10px;
+    padding: 8px;
+    margin-top: 60px;
+}

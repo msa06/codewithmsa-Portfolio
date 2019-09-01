@@ -11,13 +11,16 @@
 }
 
 /* Home */
+
 #home {
   color: #453a49;
   box-sizing: border-box;
 }
+
 a {
   color: inherit;
 }
+
 a:hover {
   text-decoration: none;
   color: inherit;
@@ -26,17 +29,21 @@ a:hover {
 span {
   font-weight: bold;
 }
+
 .navbar-brand {
   font-weight: 700;
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
 }
+
 /* Navigation */
+
 .nav-item a {
   text-decoration: none;
   font-size: 17px;
   font-weight: bold;
 }
+
 .nav-item a:hover {
   /* color: rgba(10, 18, 42, 1); */
   border-bottom: 2px solid #76b041;
@@ -47,11 +54,20 @@ nav.shrink {
   height: 60px;
   transition: all ease 0.5s;
 }
+
 nav.shrink a {
   text-decoration: none;
   padding-bottom: 3px;
   color: white;
 }
+
+.navbarcollapse {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background: #222222;
+}
+
 .nav-item .shrink a:hover {
   text-decoration: none;
   color: white;
@@ -89,6 +105,7 @@ nav.shrink a {
 .subtext {
   font-size: 36px;
 }
+
 .subtexthead {
   font-size: 28px;
   font-weight: bolder;
@@ -119,19 +136,23 @@ nav.shrink a {
   margin: 20px;
   background: #efefef;
 }
+
 #workbutton:hover {
   border: 3px solid #453a49;
 }
+
 #workbutton a {
   color: #453a49;
 }
 
 /* About Page */
+
 .sectionhead {
   color: #0a122a;
   font-size: 36px;
   font-weight: bolder;
 }
+
 .headline {
   width: 10%;
   border: 3px solid #ad161b;
@@ -154,9 +175,11 @@ nav.shrink a {
 }
 
 /* Portfolio Section */
+
 .portfolio {
   min-height: 650px;
 }
+
 .checkproject {
   border: 2px solid #453a49;
   background: white;
@@ -171,30 +194,48 @@ nav.shrink a {
   float: left;
   padding: 20px;
 }
+
 .reableapp {
   height: 280px;
   float: right;
   padding: 20px;
 }
+
 .plink {
   text-decoration: none;
   color: #453a49;
 }
 
 /* Contact */
+
 #contact {
   background: #222222;
+  color: #efefef;
 }
+
 .headlinerev {
   width: 10%;
   border: 3px solid #76b041;
   border-radius: 5px;
 }
+
 .fa-3x {
   color: #aaa;
 }
+
 .fa-3x:hover {
   color: #cccccc;
+}
+
+.btn-submit {
+  color: #aaaaaa;
+  border: 1px solid #aaaaaa;
+}
+
+.btn-submit:hover {
+  color: #ffffff;
+  background: #66af21;
+  border: 1px solid #66af21;
 }
 
 /* Media Query */
@@ -223,12 +264,10 @@ nav.shrink a {
     margin-top: 50%;
     font-size: 36px;
   }
-
   .titletextname {
     font-size: 36px;
     margin: 8%;
   }
-
   .subtext {
     font-size: 24px;
     margin: 8%;
