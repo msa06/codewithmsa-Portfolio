@@ -5,15 +5,17 @@
 
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
-      $("nav").addClass("shrink");
+      // $("nav").addClass("shrink");
       $("nav").removeClass("navbar-light");
       $("nav").addClass("navbar-dark");
+      $("nav").addClass("bg-dark");
 
       // alert("Scrolling beyond 50");
     } else {
-      $("nav").removeClass("shrink");
+      // $("nav").removeClass("shrink");
       $("nav").removeClass("navbar-dark");
       $("nav").addClass("navbar-light");
+      $("nav").removeClass("bg-dark");
     }
   });
 
