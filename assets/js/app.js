@@ -1,26 +1,18 @@
 // Navigation
-(function($) {
+(function ($) {
   // Wow
   new WOW().init();
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(document).scrollTop() > 50) {
-      // $("nav").addClass("shrink");
-      $("nav").removeClass("navbar-light");
-      $("nav").addClass("navbar-dark");
-      $("nav").addClass("bg-dark");
-
-      // alert("Scrolling beyond 50");
+      $("nav").addClass("navbar-shadow");
     } else {
-      // $("nav").removeClass("shrink");
-      $("nav").removeClass("navbar-dark");
-      $("nav").addClass("navbar-light");
-      $("nav").removeClass("bg-dark");
+      $("nav").removeClass("navbar-shadow");
     }
   });
 
   //Smooth Scroll
-  $("#main-nav a").on("click", function(e) {
+  $("#main-nav a").on("click", function (e) {
     if (this.hash !== "") {
       e.preventDefault();
 
@@ -29,7 +21,7 @@
       //Implement smooth
       $("html,body").animate(
         {
-          scrollTop: $(hash).offset().top
+          scrollTop: $(hash).offset().top,
         },
         800,
         () => (window.location.hash = hash)
@@ -43,51 +35,53 @@
       "Web Developer",
       "Mobile Developer",
       "UI/UX Designer",
-      "Video Editor"
+      "Video Editor",
     ],
-    typeSpeed: 30,
-    backSpeed: 30,
+    typeSpeed: 40,
+    backSpeed: 20,
+    backDelay: 1000,
     loop: true,
-    smartBackspace: true
+    smartBackspace: true,
+    cursorChar: "|",
   });
 
   // Progress bar
-  $(".techskills").appear(function() {
+  $(".techskills").appear(function () {
     $("#core-java-bar").LineProgressbar({
       percentage: 75,
       height: "20px",
       radius: "15px",
-      triggerOnce: false
+      triggerOnce: false,
     });
     $("#cpp-bar").LineProgressbar({
       percentage: 65,
       height: "20px",
-      radius: "15px"
+      radius: "15px",
     });
     $("#python-bar").LineProgressbar({
       percentage: 50,
       height: "20px",
-      radius: "15px"
+      radius: "15px",
     });
     $("#html5-bar").LineProgressbar({
       percentage: 85,
       height: "20px",
-      radius: "15px"
+      radius: "15px",
     });
     $("#css3-bar").LineProgressbar({
       percentage: 70,
       height: "20px",
-      radius: "15px"
+      radius: "15px",
     });
     $("#js-bar").LineProgressbar({
       percentage: 60,
       height: "20px",
-      radius: "15px"
+      radius: "15px",
     });
   });
 
   // Scroll SPY
   $("body").scrollspy({
-    target: "#main-nav"
+    target: "#main-nav",
   });
 })(jQuery);

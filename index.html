@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- font-awesome -->
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+		integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 	<!-- Progress Bar -->
 	<link rel="stylesheet" href="./assets/css/jquery.lineProgressbar.css" />
 	<!-- Animate -->
@@ -24,29 +24,34 @@
 
 <body data-spy="scroll" data-target="#main-nav">
 	<!-- Navigation -->
-	<nav id="main-nav" class="navbar navbar-expand-sm fixed-top mb-3">
+	<nav id="main-nav" class="navbar navbar-expand-sm navbar-light fixed-top mb-3">
 		<div class="container">
-			<a class="navbar-brand" href="#home">codewithmsa
-			</a>
-			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+			<a class="navbar-brand" href="#home">codewithmsa</a>
+			<!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
+			<div class="collapse navbar-collapse text-center" id="navbarNav">
+				<ul class="navbar-nav ml-auto mr-4">
+					
+
+				</ul>
+			</div> -->
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="navbarCollapse" class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+					<li class="nav-item my-2">
 						<a class="nav-link" href="#home">Home</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item my-2">
 						<a class="nav-link" href="#about">About</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item my-2">
 						<a class="nav-link" href="#portfolio">Portfolio</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item my-2">
 						<a class="nav-link" href="#contact">Contact</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="assets/Resume/">Resume</a>
 					</li>
 				</ul>
 			</div>
@@ -56,204 +61,213 @@
 	<!-- Landing Page -->
 	<section id="home">
 		<div class="container">
-			<div class="row">
-				<div class="col">
-					<p class="text-center titletext"> Hello, I am</p>
-					<p class="text-center titletextname">Mohammad Suhaib Ahmed</p>
-					<!-- <p class="text-center subtext"> <span id="devtext">DEVELOPER</span> / <span id="destext">
-							DESIGNER</span> </p> -->
-					<h2 class="text-center subtext"> I am a <span class="type typedtext"></span></h2>
-					<p class="text-center">
-						<button id="workbutton" class="mt-5"><a href="#portfolio"> CHECK MY WORK</a></button>
-					</p>
+			<div class="row justify-content-center">
+				<div class="col-md-7">
+					<p class="titletext"><span class="highlight"> Hello,</span> I am</p>
+					<p class="titletextname">Mohammad Suhaib Ahmed</p>
 
+					<h2 class="subtext"> I am a <span class="type highlight"></span></h2>
+					<button id="resumebutton" class="mt-4"><a href="./assets/Resume/MSA_Resume_V7.pdf">Get
+							Resume</a></button>
+					<button id="workbutton" class="mt-4"><a
+							href="https://criodo.github.io/Crio-Launch-Feb-2020-suhaib-md06/" target="_blank">Crio's
+							Portfolio</a></button>
+
+
+
+
+
+				</div>
+				<div class="col-md-4 mt-5">
+					<img src="./assets/images/boycode.png" alt="" id="landingpic"
+						class="d-md-block d-none wow fadeInRight">
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- About Section -->
-	<section class="about p-5" id="about">
-		<div class="container">
+	<section class="about my-5" id="about">
+		<div class="container my-4">
 			<div class="row">
-				<div class="col-md-12 mt-5">
+				<div class="col-md-12">
 					<h2 class="text-center sectionhead">About Me</h2>
-					<hr class="text-center headline">
-					<div class="text-center aboutinfo">
-						<p>My name is Mohammad Suhaib Ahmed. I am a final year <span class="selected">Computer
-								Engineering</span>
-							Student, I am passionate about <span class="selected">Web</span> Development and <span
-								class="selected">Mobile</span>
-							Development.</p>
-					</div>
+					<hr class="text-center headline"><br>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="row mt-5">
-				<div class="col-md-5 text">
-					<img src="assets/images/profilepic.jpg" alt="profilepic" class="profilepic img-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="./assets/images/mathieumare.png" alt="Image" class="d-md-block d-none wow fadeInLeft"
+						id="aboutpic">
 				</div>
-				<div class="col-md-7 px-3 ">
-					<h2 class="subtexthead mt-2">Technical Skills</h2>
+				<div class="col-md-5">
+					<p id="abouttext">I am a final year <span class="selected">Computer
+							Engineering</span>
+						Student, I am passionate about <span class="selected">Web</span> Development and <span
+							class="selected">Mobile</span>
+						Development.
+					</p>
+					<p id="subheading">Technical Skills</p>
 					<div class="techskills">
+						<div class="row">
+							<div class="col-md">
+								<span>Core Java</span>
+								<div id="core-java-bar"></div>
+								<span>C++</span>
+								<div id="cpp-bar"></div>
+								<span>Python</span>
+								<div id="python-bar"></div>
+							</div>
+							<div class="col-md">
+								<span>HTML5</span>
+								<div id="html5-bar"></div>
+								<span>CSS3</span>
+								<div id="css3-bar"></div>
+								<span>Javascript</span>
+								<div id="js-bar"></div>
+							</div>
+						</div>
 
-
-						<span>Core Java</span>
-						<div id="core-java-bar"></div>
-						<span>C++</span>
-						<div id="cpp-bar"></div>
-						<span>Python</span>
-						<div id="python-bar"></div>
-						<span>HTML5</span>
-						<div id="html5-bar"></div>
-						<span>CSS3</span>
-						<div id="css3-bar"></div>
-						<span>Javascript</span>
-						<div id="js-bar"></div>
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</section>
 
 	<!-- Portfolio -->
 	<section class="portfolio p-5" id="portfolio">
-		<div class="container">
+		<div class="container my-4">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="text-center sectionhead">Portfolio</h2>
-					<hr class="text-center headline">
+					<h2 class="text-center sectionhead">Projects</h2>
+					<hr class="text-center headline"><br>
 				</div>
 			</div>
-		</div>
-		<div class="container mb-4">
 			<div class="row">
 				<div class="col-md-6">
-					<h2 class="subtexthead mt-5">Preventive Maintaince System</h2>
-					<p>The Project we made is for Smart India Hackathon 2019 Software
-						Edition in which we made a Preventive Maintenance System for Goa
-						Shipyard Ltd.
-						Preventive Maintenance System proactively perform maintenance,
-						repairs and replacements so that you can prevent failures before
-						they ever have the chance to occur.
-					</p>
-					<button class="checkproject"><a href="https://github.com/msa06/PMS-Frontend" class="plink"> View <i
-								class="fa fa-github"></i></a> </button>
+					<div class="card wow fadeInLeft">
+						<img class="card-img-top" src="./assets/images/portfolio/pms.png" alt="Card image cap">
+						<div class="card-body p-5">
+							<h3 class="card-title">Preventive Maintaince System</h3>
+							<p>
+								Proactively perform maintenance, repairs and replacements so that you can prevent
+								failures before
+								they ever have the chance to occur.
+							</p>
+							<button class="checkproject float-right"><a href="https://github.com/msa06/PMS-Frontend"
+									class="plink">
+									See Code
+									<i class="fab fa-github"></i></a></button>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6">
-					<img src="./assets/images/portfolio/pms.png" class="img-fluid wow fadeInRight" alt="pmsimg">
-				</div>
-			</div>
-		</div>
-		<div class="container mb-4">
-			<div class="row">
-				<div class="col-md-6">
-					<img src="./assets/images/portfolio/quizapp.png" class="quizapp img-fluid wow fadeInLeft"
-						alt="quizapp">
-				</div>
-				<div class="col-md-6">
-					<h2 class="subtexthead mt-2">Pokemon App</h2>
-					<p>Live Quiz Application for the website swagdeal. in where there will be
-						weekly quiz game and the user can win gift vouchers for the website. I
-						Implemented this project using Android for frontend and Firebase for
-						backend and Rest API for Quiz Data.</p>
-					<button class="checkproject"><a href="https://github.com/msa06/Pokoman" class="plink"> View <i
-								class="fa fa-github"></i></a> </button>
-				</div>
-
-			</div>
-		</div>
-		<div class="container mb-4">
-			<div class="row">
-
-				<div class="col-md-6">
-					<h2 class="subtexthead mt-4">Reable App</h2>
-					<p>Timetable app was designed for the
-						convenience of the
-						student. It was a miniproject for college. The app main Feature is that
-						it is a Realtime application which means that it updates the all the
-						changes in the timetable.</p>
-					<button class="checkproject"><a href="https://github.com/msa06/Timetable-Miniproject" class="plink">
-							View <i class="fa fa-github"></i></a> </button>
+					<div class="card card-2 wow fadeInRight">
+						<img class="card-img-top mt-4 quizimage" src="./assets/images/portfolio/quizapp.png"
+							alt="Card image cap">
+						<div class="card-body p-5">
+							<h3 class="card-title">Pokemon App</h3>
+							<p>
+								Live Quiz Application for the website swagdeal. in where there will be
+								weekly quiz game and the user can win gift vouchers for the website.
+							</p>
+							<button class="checkproject float-right"><a href="https://github.com/msa06/Pokoman"
+									class="plink">
+									See Code
+									<i class="fab fa-github"></i></a></button>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6">
-					<img src="./assets/images/portfolio/reable.png" class="reableapp img-fluid wow fadeInRight"
-						alt="quizapp">
+					<div class="card card-3 wow fadeInLeft">
+						<img class="card-img-top mt-4 quizimage" src="./assets/images/portfolio/reable.png"
+							alt="Card image cap">
+						<div class="card-body p-5">
+							<h3 class="card-title">Reable App</h3>
+							<p>
+								The app main Feature is that
+								it is a Realtime application which means that it updates the all the
+								changes in the timetable.
+							</p>
+							<button class="checkproject float-right"><a
+									href="https://github.com/msa06/Timetable-Miniproject" class="plink">
+									See Code
+									<i class="fab fa-github"></i></a></button>
+						</div>
+					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
 
+	<!-- Contact -->
+	<!-- About Section -->
+	<section class="contact my-5" id="contact">
+		<div class="container my-4">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="text-center sectionhead">Let's <span class="selected">Work</span> together</h2>
+					<hr class="text-center headline"><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<form action="https://formspree.io/xzbawwdj" method="POST" class="wow pulse">
+						<div class="form-group ">
+							<input type="text" class="form-control" name="name" placeholder="Your Full Name">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Your Email Address">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" name="message" cols="4 " rows="2"
+								placeholder="Tell me something about your project (Scope of Work, Timeline, Budget)"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Send" class="btn btn-submit btn-block btn-lg">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- Footer -->
 
 	<!-- Footer/ Contact -->
-	<section id="contact" class="mt-3 py-5 bg-dark">
+	<section id="footer" class="py-5">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 mt-3">
-					<h3 class="sectionhead text-white text-center wow bounceInLeft">Interested in doing a project
-						together?</h3>
-					<h2 class="text-center subtexthead text-white  wow bounceInRight">Get In Touch</h2>
-					<hr class="text-center headlinerev">
-					<div class="text-center">
+				<div class="col-md-6">
+					<h5 class="footer-name pt-5">Mohammad Suhaib Ahmed</h5>
+					<p class="footer-email pb-2">codewithmsa@gmail.com</p>
+				</div>
+				<div class="col-md-6 px-3">
+					<div class="rounded-social-buttons py-5">
+
+						<a class="social-button linkedin" href="https://www.linkedin.com/in/msa06/" target="_blank"><i
+								class="fab fa-linkedin"></i></a>
+						<a class="social-button instagram" href="https://www.instagram.com/codewithmsa/"
+							target="_blank"><i class="fab fa-instagram"></i></a>
+						<a class="social-button instagram" href="https://www.github.com/msa06" target="_blank"><i
+								class="fab fa-github"></i></a>
+						<a class="social-button dribble" href="https://dribbble.com/msa06" target="_blank"><i
+								class="fab fa-dribbble"></i></a>
+						<a class="social-button youtube" href="https://www.youtube.com/MSAProd06" target="_blank"><i
+								class="fab fa-youtube"></i></a>
 
 					</div>
-
 				</div>
 			</div>
+			<p class="copyright">© Mohammad Suhaib Ahmed, <span id="year"></span></p>
+
 		</div>
-		<div class="container py-5">
-			<div class="row">
-				<div class="col-md-6 mb-4">
-					<div class="wow bounceInLeft">
-						<h5>Address</h5>
-						<p>402, Gokulam Society, Bopkhel Pune</p>
-						<h5>Email</h5>
-						<p>suhaib.md06@gmail.com</p>
-						<h5>Phone</h5>
-						<p>+91 9028 334 314</p>
-
-					</div>
-
-					<a href="https://www.linkedin.com/in/msa06/"><i
-							class="fa fa-2x fa-linkedin pr-3 wow bounceInUp"></i></a>
-					<a href="https://github.com/msa06"><i class="fa fa-2x fa-github pr-3 wow bounceInUp "></i></a>
-					<a href="https://www.facebook.com/suhaib.md"><i
-							class="fa fa-2x fa-facebook pr-3  wow bounceInUp "></i></a>
-					<a href="https://www.youtube.com/MSAProd06"><i
-							class="fa fa-2x fa-youtube pr-3  wow bounceInUp "></i></a>
-				</div>
-				<div class="col-md-6 wow bounceInRight">
-					<div class="row">
-						<div class="col">
-							<form action="https://formspree.io/suhaib.md06@gmail.com" method="POST">
-								<div class="form-group">
-									<input type="text" class="form-control" name="name" placeholder="Your Name">
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-control" name="email" placeholder="Email">
-								</div>
-								<div class="form-group">
-									<textarea class="form-control" name="message" cols="4 " rows="2"
-										placeholder="Message"></textarea>
-								</div>
-								<div class="form-group">
-									<input type="submit" value="Send" class="btn btn-submit btn-block btn-lg">
-								</div>
-							</form>
-						</div>
 
 
-					</div>
-
-
-				</div>
-			</div>
-		</div>
 	</section>
+
+
+
 
 
 
@@ -286,7 +300,9 @@
 	<script src="./assets/js/wow.min.js"></script>
 	<script src="./assets/js/app.js"></script>
 	<script>
-
+		var d = new Date();
+		var y = d.getFullYear();
+		document.getElementById("year").innerHTML = " " + y;
 	</script>
 </body>
 
