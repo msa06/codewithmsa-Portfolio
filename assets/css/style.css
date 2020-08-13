@@ -4,28 +4,34 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+/* Root Color */
 :root {
   --textcolorlight: #453a49;
   --textcolordark: #0a122a;
   --primarycolor: #218f1d;
   --ascentcolor: #ad161b;
   --navcolor: #4e2689;
+  --headlinecolor:#5f3aae
 }
 
-/* Home */
 
 * {
   font-family: "Poppins", sans-serif;
+  /* margin:0;
+  padding:0;
+  box-sizing: border-box; */
 }
 
-/* #about {
-  background: #8D70D6;
- color: white;
-} */
-
+/*******************************************
+          GLOBAL STYLE
+********************************************/
 #home {
+  
   color: #453a49;
   box-sizing: border-box;
+  overflow: hidden;
+  min-height: 650px;
 }
 
 a {
@@ -45,6 +51,30 @@ span {
   color: #7853d7;
 }
 
+.sectionhead {
+  color: #152b53;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.headline {
+  width: 160px;
+  height: 10px;
+  background-color: var(--headlinecolor);
+}
+
+
+
+/*******************************************
+          Navigation Section
+********************************************/
+
+.navbar {
+  opacity: 1;
+  background: white;
+}
+
+
 .navbar-brand {
   font-weight: 600;
   font-size: 1.3em;
@@ -52,13 +82,6 @@ span {
   margin-right: 150px;
   color: #0a122a;
   /* font-family: "Open Sans", sans-serif; */
-}
-
-/* Navigation */
-
-.navbar {
-  opacity: 1;
-  background: white;
 }
 
 .navbar-shadow {
@@ -94,13 +117,9 @@ span {
   margin-left: 100px;
 }
 
-/* Home */
-
-#home {
-  /* set background */
-  overflow: hidden;
-  min-height: 650px;
-}
+/*******************************************
+        LANDING SECTION
+********************************************/
 
 #landingpic {
   width: auto;
@@ -144,29 +163,6 @@ span {
   font-weight: bolder;
 }
 
-/* Social Section */
-
-.social-connect {
-  text-decoration: none;
-  list-style: none;
-}
-
-.social-items {
-  color: #ffffff;
-}
-
-.social-icon {
-  color: #ffffff;
-}
-
-/* 
-#devtext {
-  font-family: "Roboto Mono", monospace;
-}
-
-#destext {
-  font-family: "Monoton", cursive;
-} */
 
 #resumebutton {
   background: #5f3aae;
@@ -200,18 +196,9 @@ span {
   color: #ffffff;
 }
 
-/* About Section */
-.sectionhead {
-  color: #152b53;
-  font-size: 2.5em;
-  font-weight: 700;
-}
-
-.headline {
-  width: 160px;
-  height: 10px;
-  background-color: #5f3aae;
-}
+/*******************************************
+          ABOUT SECTION
+********************************************/
 
 #aboutpic {
   width: auto;
@@ -233,24 +220,121 @@ span {
   background-color: #7853d7 !important;
 }
 
-/* Portfolio */
-.card {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+/*******************************************
+          Portfolio SECTION
+********************************************/
+.filters {
+  text-align: center;
+  margin: 0px auto;
 }
+.filters ul {
+  padding: 0;
+}
+.filters ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  color:var(--headlinecolor);
+  border: 1px solid var(--headlinecolor);
+  border-radius: 25px;
+  margin:10px;
+}
+
+.filters ul li.active{
+  background:var(--headlinecolor);
+  color:#ffffff
+}
+
+.filters ul li:hover {
+  background:var(--headlinecolor);
+  color:#ffffff
+}
+
+.filters-content .grid{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 
+              0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 350px;
+  height: 350px;
+  margin:10px;
+  display: flex;
+  flex-flow: column;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: hidden;
+}
+.content{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: .9;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--headlinecolor);
+  color:white;
+  -webkit-transform: translateY(80%);
+          transform: translateY(80%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
+}
+.content-title {
+  margin-top: 0px;
+}
+
+.content-extra {
+  margin: 0;
+}
+
+.content-slide-up:hover .content {
+  opacity: .9;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
+}
+
 .card-title {
   font-weight: 600;
+  font-size: 1.2em;
+  
 }
 .card-body p {
-  font-weight: 400;
-  font-size: 1.2em;
+  font-weight: 200;
+  font-size: 1em;
+  margin-top: 15px;
 }
+.tag{
+  padding: 8px 15px;
+  background: #ffffff;
+  opacity: .9;
+  width: auto;
+  color:var(--navcolor);
+  border-radius:2px;
+}
+
 .card-body button {
   background-color: white;
   color: #5f3aae;
   font-size: 10pt;
   /* border: 2px solid #4e2689; */
   border-radius: 9px;
-  padding: 20px 30px;
+  padding: 15px 20px;
   text-align: center;
   margin: 10px 10px 0px 0px;
   font-weight: 700;
@@ -258,20 +342,16 @@ span {
   box-shadow: 0px 0px 3px 1px #7853d7;
   border-style: none;
 }
-.quizimage {
-  max-height: 300px;
+.projectimg {
+  max-height: 220px;
   width: auto;
   margin: 0px auto;
 }
 
-.card-2 {
-  margin-top: 600px;
-}
-.card-3 {
-  margin-top: -100px;
-}
 
-/* Contact */
+/*******************************************
+          Contact SECTION
+********************************************/
 .form-group input {
   padding: 30px 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -304,6 +384,9 @@ span {
   background-color: #5f3aae;
 }
 
+/*******************************************
+          Footer SECTION
+********************************************/
 #footer {
   background-color: #08090f;
   color: white;
@@ -351,6 +434,10 @@ span {
   padding-right: 50px;
 }
 
+
+/*******************************************
+          MEDIA QUERY 
+********************************************/
 @media screen and (max-width: 480px) {
   .navbar-brand {
     font-size: 1.2em;

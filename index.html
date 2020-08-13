@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Codewithmsa</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+    <!-- Progress Bar -->
+    <link rel="stylesheet" href="./assets/css/jquery.lineProgressbar.css" />
+    <!-- Animate -->
+    <link rel="stylesheet" href="./assets/css/animate.css" type="text/css" />
+    <!-- Custom  -->
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Codewithmsa</title>
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<!-- font-awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-		integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-	<!-- Progress Bar -->
-	<link rel="stylesheet" href="./assets/css/jquery.lineProgressbar.css" />
-	<!-- Animate -->
-	<link rel="stylesheet" href="./assets/css/animate.css" type="text/css">
-	<!-- Custom  -->
-	<link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-
-
-</head>
-
-<body data-spy="scroll" data-target="#main-nav">
-	<!-- Navigation -->
-	<nav id="main-nav" class="navbar navbar-expand-sm navbar-light fixed-top mb-3">
-		<div class="container">
-			<a class="navbar-brand" href="#home">codewithmsa</a>
-			<!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+  <body data-spy="scroll" data-target="#main-nav">
+    <!-- Navigation -->
+    <nav
+      id="main-nav"
+      class="navbar navbar-expand-sm navbar-light fixed-top mb-3"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#home">codewithmsa</a>
+        <!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse text-center" id="navbarNav">
@@ -36,274 +44,370 @@
 
 				</ul>
 			</div> -->
-			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div id="navbarCollapse" class="collapse navbar-collapse">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item my-2">
-						<a class="nav-link" href="#home">Home</a>
-					</li>
-					<li class="nav-item my-2">
-						<a class="nav-link" href="#about">About</a>
-					</li>
-					<li class="nav-item my-2">
-						<a class="nav-link" href="#portfolio">Portfolio</a>
-					</li>
-					<li class="nav-item my-2">
-						<a class="nav-link" href="#contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<!-- Landing Page -->
-	<section id="home">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7">
-					<p class="titletext"><span class="highlight"> Hello,</span> I am</p>
-					<p class="titletextname">Mohammad Suhaib Ahmed</p>
+    <!-- Landing Page -->
+    <section id="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <p class="titletext"><span class="highlight"> Hello,</span> I am</p>
+            <p class="titletextname">Mohammad Suhaib Ahmed</p>
 
-					<h2 class="subtext"> I am a <span class="type highlight"></span></h2>
-					<button id="resumebutton" class="mt-4"><a href="./assets/Resume/MSA_Resume_V7.pdf">Get
-							Resume</a></button>
-					<button id="workbutton" class="mt-4"><a
-							href="https://criodo.github.io/Crio-Launch-Feb-2020-suhaib-md06/" target="_blank">Crio's
-							Portfolio</a></button>
+            <h2 class="subtext">I am a <span class="type highlight"></span></h2>
+            <button id="resumebutton" class="mt-4">
+              <a href="./assets/Resume/MSA_Resume_V7.pdf">Get Resume</a>
+            </button>
+            <button id="workbutton" class="mt-4">
+              <a
+                href="https://criodo.github.io/Crio-Launch-Feb-2020-suhaib-md06/"
+                target="_blank"
+                >Crio's Portfolio</a
+              >
+            </button>
+          </div>
+          <div class="col-md-4 mt-5">
+            <img
+              src="./assets/images/boycode.png"
+              alt=""
+              id="landingpic"
+              class="d-md-block d-none wow fadeInRight"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- About Section -->
+    <section class="about my-5" id="about">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center sectionhead">About Me</h2>
+            <hr class="text-center headline" />
+            <br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./assets/images/mathieumare.png"
+              alt="Image"
+              class="d-md-block d-none wow fadeInLeft"
+              id="aboutpic"
+            />
+          </div>
+          <div class="col-md-5">
+            <p id="abouttext">
+              I am a final year
+              <span class="selected">Computer Engineering</span> Student, I am
+              passionate about <span class="selected">Web</span> Development and
+              <span class="selected">Mobile</span>
+              Development.
+            </p>
+            <p id="subheading">Technical Skills</p>
+            <div class="techskills">
+              <div class="row">
+                <div class="col-md">
+                  <span>Core Java</span>
+                  <div id="core-java-bar"></div>
+                  <span>C++</span>
+                  <div id="cpp-bar"></div>
+                  <span>Python</span>
+                  <div id="python-bar"></div>
+                </div>
+                <div class="col-md">
+                  <span>HTML5</span>
+                  <div id="html5-bar"></div>
+                  <span>CSS3</span>
+                  <div id="css3-bar"></div>
+                  <span>Javascript</span>
+                  <div id="js-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Portfolio -->
+    <section class="portfolio p-5" id="portfolio">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center sectionhead">Projects</h2>
+            <hr class="text-center headline" />
+            <br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="filters">
+            <ul>
+              <li class="active" data-filter="*">All</li>
+              <li data-filter=".college">College</li>
+              <li data-filter=".internship">Internship</li>
+              <li data-filter=".hackathon">Hackathon</li>
+            </ul>
+          </div>
+        </div>
+        <div class="filters-content">
+          <div class="row">
+            <div class="col-12 grid">
+              <div class="item hackathon">
+                <div class="card wow fadeIn content-slide-up">
+                  <img
+                    class="card-img-top projectimg mt-3"
+                    src="./assets/images/portfolio/pms.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body content">
+                    <h3 class="card-title content-title mb-5">PMS</h3>
+                    <div class="content-extra">
+                      <span class="tag">SIH 2019</span>
+                      <p>
+                        Proactively perform maintenance, repairs and
+                        replacements so that you can prevent failures before
+                        they ever have the chance to occur.
+                      </p>
 
+                      <button class="checkproject">
+                        <a
+                          href="https://github.com/msa06/PMS-Frontend"
+                          class="plink"
+                        >
+                          Check Project
+                          <i class="ml-2 fab fa-github"></i
+                        ></a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item internship">
+                <div class="card card-2 wow fadeIn content-slide-up">
+                  <img
+                    class="card-img-top mt-4 projectimg"
+                    src="./assets/images/portfolio/quizapp.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body content">
+                    <h3 class="card-title content-title mb-5">Pokemon App</h3>
+                    <div class="content-extra">
+                      
+                      <span class="tag">Internship</span>
+                      <p>
+                        Live Quiz Application for the website swagdeal. in where
+                        there will be weekly quiz game and the user can win gift
+                        vouchers for the website.
+                      </p>
+                      <button class="checkproject">
+                        <a
+                          href="https://github.com/msa06/Pokoman"
+                          class="plink"
+                        >
+                        Check Project
+                          <i class="fab fa-github"></i
+                        ></a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item college">
+                <div class="card card-3 wow fadeIn content-slide-up">
+                  <img
+                    class="card-img-top mt-4 projectimg"
+                    src="./assets/images/portfolio/reable.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body content">
+                    <h3 class="card-title content-title mb-5">Reable App</h3>
+                    <div class="content-extra mt-3">
+                      
+                      <span class="tag">Mini Project</span>
+                      <p>
+                        The app main Feature is that it is a Realtime
+                        application which means that it updates the all the
+                        changes in the timetable.
+                      </p>
+                      <button class="checkproject">
+                        <a
+                          href="https://github.com/msa06/Timetable-Miniproject"
+                          class="plink"
+                        >
+                        Check Project
+                          <i class="fab fa-github"></i
+                        ></a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <!-- About Section -->
+    <section class="contact my-5" id="contact">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center sectionhead">
+              Let's <span class="selected">Work</span> together
+            </h2>
+            <hr class="text-center headline" />
+            <br />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <form
+              action="https://formspree.io/xzbawwdj"
+              method="POST"
+              class="wow pulse"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Your Full Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Your Email Address"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  cols="4 "
+                  rows="2"
+                  placeholder="Tell me something about your project (Scope of Work, Timeline, Budget)"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Send"
+                  class="btn btn-submit btn-block btn-lg"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				</div>
-				<div class="col-md-4 mt-5">
-					<img src="./assets/images/boycode.png" alt="" id="landingpic"
-						class="d-md-block d-none wow fadeInRight">
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Footer -->
 
-	<!-- About Section -->
-	<section class="about my-5" id="about">
-		<div class="container my-4">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="text-center sectionhead">About Me</h2>
-					<hr class="text-center headline"><br>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<img src="./assets/images/mathieumare.png" alt="Image" class="d-md-block d-none wow fadeInLeft"
-						id="aboutpic">
-				</div>
-				<div class="col-md-5">
-					<p id="abouttext">I am a final year <span class="selected">Computer
-							Engineering</span>
-						Student, I am passionate about <span class="selected">Web</span> Development and <span
-							class="selected">Mobile</span>
-						Development.
-					</p>
-					<p id="subheading">Technical Skills</p>
-					<div class="techskills">
-						<div class="row">
-							<div class="col-md">
-								<span>Core Java</span>
-								<div id="core-java-bar"></div>
-								<span>C++</span>
-								<div id="cpp-bar"></div>
-								<span>Python</span>
-								<div id="python-bar"></div>
-							</div>
-							<div class="col-md">
-								<span>HTML5</span>
-								<div id="html5-bar"></div>
-								<span>CSS3</span>
-								<div id="css3-bar"></div>
-								<span>Javascript</span>
-								<div id="js-bar"></div>
-							</div>
-						</div>
+    <!-- Footer/ Contact -->
+    <section id="footer" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="footer-name pt-5">Mohammad Suhaib Ahmed</h5>
+            <p class="footer-email pb-2">codewithmsa@gmail.com</p>
+          </div>
+          <div class="col-md-6 px-3">
+            <div class="rounded-social-buttons py-5">
+              <a
+                class="social-button linkedin"
+                href="https://www.linkedin.com/in/msa06/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                class="social-button instagram"
+                href="https://www.instagram.com/codewithmsa/"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="social-button instagram"
+                href="https://www.github.com/msa06"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                class="social-button dribble"
+                href="https://dribbble.com/msa06"
+                target="_blank"
+                ><i class="fab fa-dribbble"></i
+              ></a>
+              <a
+                class="social-button youtube"
+                href="https://www.youtube.com/MSAProd06"
+                target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">
+          © Mohammad Suhaib Ahmed, <span id="year"></span>
+        </p>
+      </div>
+    </section>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQuery -->
 
-	<!-- Portfolio -->
-	<section class="portfolio p-5" id="portfolio">
-		<div class="container my-4">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="text-center sectionhead">Projects</h2>
-					<hr class="text-center headline"><br>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="card wow fadeInLeft">
-						<img class="card-img-top" src="./assets/images/portfolio/pms.png" alt="Card image cap">
-						<div class="card-body p-5">
-							<h3 class="card-title">Preventive Maintaince System</h3>
-							<p>
-								Proactively perform maintenance, repairs and replacements so that you can prevent
-								failures before
-								they ever have the chance to occur.
-							</p>
-							<button class="checkproject float-right"><a href="https://github.com/msa06/PMS-Frontend"
-									class="plink">
-									See Code
-									<i class="fab fa-github"></i></a></button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card card-2 wow fadeInRight">
-						<img class="card-img-top mt-4 quizimage" src="./assets/images/portfolio/quizapp.png"
-							alt="Card image cap">
-						<div class="card-body p-5">
-							<h3 class="card-title">Pokemon App</h3>
-							<p>
-								Live Quiz Application for the website swagdeal. in where there will be
-								weekly quiz game and the user can win gift vouchers for the website.
-							</p>
-							<button class="checkproject float-right"><a href="https://github.com/msa06/Pokoman"
-									class="plink">
-									See Code
-									<i class="fab fa-github"></i></a></button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card card-3 wow fadeInLeft">
-						<img class="card-img-top mt-4 quizimage" src="./assets/images/portfolio/reable.png"
-							alt="Card image cap">
-						<div class="card-body p-5">
-							<h3 class="card-title">Reable App</h3>
-							<p>
-								The app main Feature is that
-								it is a Realtime application which means that it updates the all the
-								changes in the timetable.
-							</p>
-							<button class="checkproject float-right"><a
-									href="https://github.com/msa06/Timetable-Miniproject" class="plink">
-									See Code
-									<i class="fab fa-github"></i></a></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Contact -->
-	<!-- About Section -->
-	<section class="contact my-5" id="contact">
-		<div class="container my-4">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="text-center sectionhead">Let's <span class="selected">Work</span> together</h2>
-					<hr class="text-center headline"><br>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<form action="https://formspree.io/xzbawwdj" method="POST" class="wow pulse">
-						<div class="form-group ">
-							<input type="text" class="form-control" name="name" placeholder="Your Full Name">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" placeholder="Your Email Address">
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" name="message" cols="4 " rows="2"
-								placeholder="Tell me something about your project (Scope of Work, Timeline, Budget)"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Send" class="btn btn-submit btn-block btn-lg">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer -->
-
-	<!-- Footer/ Contact -->
-	<section id="footer" class="py-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h5 class="footer-name pt-5">Mohammad Suhaib Ahmed</h5>
-					<p class="footer-email pb-2">codewithmsa@gmail.com</p>
-				</div>
-				<div class="col-md-6 px-3">
-					<div class="rounded-social-buttons py-5">
-
-						<a class="social-button linkedin" href="https://www.linkedin.com/in/msa06/" target="_blank"><i
-								class="fab fa-linkedin"></i></a>
-						<a class="social-button instagram" href="https://www.instagram.com/codewithmsa/"
-							target="_blank"><i class="fab fa-instagram"></i></a>
-						<a class="social-button instagram" href="https://www.github.com/msa06" target="_blank"><i
-								class="fab fa-github"></i></a>
-						<a class="social-button dribble" href="https://dribbble.com/msa06" target="_blank"><i
-								class="fab fa-dribbble"></i></a>
-						<a class="social-button youtube" href="https://www.youtube.com/MSAProd06" target="_blank"><i
-								class="fab fa-youtube"></i></a>
-
-					</div>
-				</div>
-			</div>
-			<p class="copyright">© Mohammad Suhaib Ahmed, <span id="year"></span></p>
-
-		</div>
-
-
-	</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-	<!-- JQuery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-	<!-- On scroll JS  -->
-
-	<script src="./assets/js/appear.js"></script>
-	<script src="./assets/js/jquery.lineProgressbar.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-	<script src="./assets/js/wow.min.js"></script>
-	<script src="./assets/js/app.js"></script>
-	<script>
-		var d = new Date();
-		var y = d.getFullYear();
-		document.getElementById("year").innerHTML = " " + y;
-	</script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <!-- On scroll JS  -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/js/appear.js"></script>
+    <script src="./assets/js/jquery.lineProgressbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+      var d = new Date();
+      var y = d.getFullYear();
+      document.getElementById("year").innerHTML = " " + y;
+    </script>
+  </body>
 </html>

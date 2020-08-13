@@ -45,6 +45,26 @@
     cursorChar: "|",
   });
 
+  // // Portfolio
+  var $grid = $(".grid").isotope({
+    itemSelector:'.item',
+    layoutMode:'fitRows'
+  })
+  $('.filters ul li').click(function(){
+    $('.filters ul li').removeClass('active');
+    $(this).addClass('active');
+    
+    var data = $(this).attr('data-filter');
+    console.log(data)
+    $grid.isotope({
+      filter: data
+    })
+  });
+  
+  
+  
+
+
   // Progress bar
   $(".techskills").appear(function () {
     $("#core-java-bar").LineProgressbar({
